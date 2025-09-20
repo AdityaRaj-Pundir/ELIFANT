@@ -18,6 +18,10 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     backdrop-filter: blur(6px);
     animation: fadeIn 0.8s ease-in-out;
+    top: 25%;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
 }
 
 /* Title */
