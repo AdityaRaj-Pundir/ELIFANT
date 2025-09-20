@@ -4,13 +4,12 @@ let currentStep = 0;
 
 document.getElementById("findRecipeBtn").addEventListener("click", async () => {
     const fileInput = document.getElementById("fridgeFile");
-    const element = document.getElementById("landing");
-    element.remove();
     if (!fileInput.files.length) {
         alert("Please select a fridge picture!");
         return;
     }
-
+    const element = document.getElementById("landing");
+    element.remove();
     const file = fileInput.files[0];
     document.getElementById("loading").style.display = "block";
     document.getElementById("recipeContainer").style.display = "none";
