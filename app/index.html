@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ELIFANT | Every Leftover Inspires Flavor</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <!--    <h1><i>ELIFANT</i></h1>-->
+    <div id = "landing">
+        <h1><img src="static/images/textlogo.png" alt="" style="height:294px; width: 996px; border-radius: 20px;"></h1>
+        <br><p>Upload a picture of your fridge, and I'll tell you what to cook, step by step.</p>
+        <div id="fridgeImage">
+            <input type="file" id="fridgeFile" accept="image/*" required>
+            <button id="findRecipeBtn">Find Recipe</button>
+        </div>
+    </div>
+    <div id="loading" style="display:none;"><br>Thinking...</div>
+
+    <div id="recipeContainer" style="display:none;">
+        <h2 style="color: #fff;">🍴 Recipe Walkthrough</h2>
+        <div id="stepText"></div>
+        <button id="prevBtn" style="display:none;">⬅ Prev</button>
+        <button id="nextBtn">Next ➡</button>
+        <br><button id="homeBtn" onclick="window.location.replace('index.html')">Home</button>
+    </div>
+</div>
+
+<!-- marked.js for Markdown rendering -->
+<script src="static/js/main.js"></script>
+<script>
+    const splash = document.getElementById('splash');
+    const main = document.getElementById('main');
+
+    // Check if splash has been shown in this session
+    if (sessionStorage.getItem('splashShown')) {
+        splash.style.display = 'none';
+        main.classList.add('show');
+    } else {
+        setTimeout(() => {
+            splash.style.opacity = '0';
+            splash.style.visibility = 'hidden';
+            main.classList.add('show');
+        }, 1500); // splash delay
+        sessionStorage.setItem('splashShown', 'true');
+    }
+</script>
+</body>
+</html>

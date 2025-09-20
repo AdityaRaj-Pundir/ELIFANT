@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fridge Chef</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- link to css -->
+    <link rel="stylesheet" href="static/css/start.css">
+
+</head>
+<body>
+<!-- Splash Screen -->
+<div class="splash" id="splash">
+    <h1>ELIFANT</h1>
+    <h3>Every Leftover Inspires Flavor</h3>
+    <div class="loader"></div>
+</div>
+
+<!-- Main Page -->
+<div class="container" id="main">
+    <h1>Welcome to Fridge Chef</h1>
+    <p>Discover recipes with what’s already in your fridge.</p>
+    <button onclick="window.location.href='index.html'">Get Started</button>
+</div>
+
+<script>
+    const splash = document.getElementById('splash');
+    const main = document.getElementById('main');
+
+    // Check if splash has been shown in this session
+    if (sessionStorage.getItem('splashShown')) {
+        splash.style.display = 'none';
+        main.classList.add('show');
+    } else {
+        setTimeout(() => {
+            splash.style.opacity = '0';
+            splash.style.visibility = 'hidden';
+            main.classList.add('show');
+        }, 1500); // splash delay
+        sessionStorage.setItem('splashShown', 'true');
+    }
+</script>
+</body>
+</html>
