@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fef9f3;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff7e6;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input {
+    background: #ff914d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input:hover {
+    background: #ff914d;
+}
+
+button {
+    background: #ff914d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #ff6f1d;
+    transition: background-color ease-in-out 0.25s;
+}
+
+#stepText {
+    margin: 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    white-space: pre-line;
+    text-align: left;
+    font-size: 18px;
+}
+
+#recipeContainer button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #6fc276;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#recipeContainer button:hover {
+    background: #4ea45c;
+}
+
+#stepText {
+    margin: 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#stepText ul {
+    padding-left: 20px;
+}
+
+#stepText strong {
+    color: #d35400;
+}
+
+#stepText h3 {
+    margin-top: 10px;
+    color: #2c3e50;
+}
