@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ELIFANT Interactive Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="intro.css">
+</head>
+<body>
+
+<div class="intro-container">
+    <h1 class="intro-title">Tap the Fridge!</h1>
+
+    <!-- Fridge image -->
+    <div class="fridge-wrapper">
+        <img src="static/images/fridge-neon.png" alt="Neon Fridge" class="fridge-img">
+
+        <!-- Hotspots -->
+        <div class="hotspot" id="spot1" style="top: 20%; left: 65%;"></div>
+        <div class="hotspot" id="spot2" style="top: 55%; left: 35%;"></div>
+        <div class="hotspot" id="spot3" style="top: 75%; left: 70%;"></div>
+    </div>
+</div>
+
+<!-- Popups -->
+<div class="popup" id="popup1">
+    <div class="popup-content">
+        <span class="close" data-close="popup1">&times;</span>
+        <h2>🥗 Fresh Ingredients</h2>
+        <p>Discover how your fridge leftovers can turn into healthy recipes!</p>
+    </div>
+</div>
+
+<div class="popup" id="popup2">
+    <div class="popup-content">
+        <span class="close" data-close="popup2">&times;</span>
+        <h2>🍕 Tasty Ideas</h2>
+        <p>Leftover pizza? I’ll help you remix it into something new!</p>
+    </div>
+</div>
+
+<div class="popup" id="popup3">
+    <div class="popup-content">
+        <span class="close" data-close="popup3">&times;</span>
+        <h2>🍩 Sweet Treats</h2>
+        <p>Don’t waste desserts — get fun ideas for reusing sweet leftovers.</p>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
