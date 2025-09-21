@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ELIFANT | Every Leftover Inspires Flavor</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        #preview {
+            width: 300px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 20);
+            border-radius: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float-tilt-both-sides {
+            0% {
+                transform: translateY(0) rotateZ(-5deg);
+            }
+            50% {
+                transform: translateY(-10px) rotateZ(5deg);
+            }
+            100% {
+                transform: translateY(0) rotateZ(-5deg);
+            }
+        }
+
+        #preview:hover {
+            animation: float-tilt-both-sides 1.5s ease-in-out infinite;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <!--    <h1><i>ELIFANT</i></h1>-->
+    <div id = "landing">
+        <h1><img src="static/images/textlogo.png" alt="" style="height:29.4%; width: 99.6%; border-radius: 20px;"></h1>
+        <br><p>Upload a picture of your fridge, and I'll tell you what to cook, step by step.</p>
+        <div id="fridgeImage">
+            <input type="file" id="fridgeFile" accept="image/*" required>
+            <a href = "index.html"><i class="fa-solid fa-house"></i></a>
+            <div class="button-group">
+                <button onclick="window.location.href='index.html'">Home</button>
+                <button id="findRecipeBtn">Find Recipe</button>
+            </div>
+        </div>
+    </div>
+    <div align = "center">
+        <div id="loading" style="display:none;"><h1 class = "loadTitle">THINKING...</h1><br>
+            <div class="loader"></div></div></div>
+    <img src="" id="preview" style="display: none; float: left; max-height: 535px; border-radius: 20px; max-width: 250px; margin-left: 0.8%; margin-right: 20px; margin-top: 12%; margin-bottom: 13%;">
+    <div id="recipeContainer" style="display: none; margin-left: 50px;">
+        <h2 style="color: #fff;">🍴 Recipe Walkthrough</h2>
+        <div id="stepText"></div>
+        <button id="prevBtn" style="display:none;">Back</button>
+        <button id="homeBtn" onclick="window.location.replace('home.html')">Home</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+</div>
+
+<!-- marked.js for Markdown rendering -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="static/js/main.js"></script>
+<script>
+    const splash = document.getElementById('splash');
+    const main = document.getElementById('main');
+
+    // Check if splash has been shown in this session
+    if (sessionStorage.getItem('splashShown')) {
+        splash.style.display = 'none';
+        main.classList.add('show');
+    } else {
+        setTimeout(() => {
+            splash.style.opacity = '0';
+            splash.style.visibility = 'hidden';
+            main.classList.add('show');
+        }, 1500); // splash delay
+        sessionStorage.setItem('splashShown', 'true');
+    }
+</script>
+<script>
+    const box = document.getElementById('recipeContainer');
+
+    // Trigger the transform and opacity change on the next tick
+    requestAnimationFrame(() => {
+        box.classList.add('transform-done');
+    });
+
+    // Listen for transition end on transform property
+    box.addEventListener('transitionend', (event) => {
+        if (event.propertyName === 'transform') {
+            // The transform is done!
+            console.log('Transform done');
+            // If you want to do something else here, you can
+        }
+    });
+</script>
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</body>
+</html>

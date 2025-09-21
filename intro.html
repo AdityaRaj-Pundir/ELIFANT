@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ELIFANT Interactive Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/intro.css">
+</head>
+<body>
+
+<div class="intro-container">
+    <h1 class="intro-title">Tap the Fridge!</h1>
+    <h3 class="intro-subtitle">Learn more about our objective.</h3>
+    <!-- Fridge image -->
+    <div class="fridge-wrapper">
+        <img src="static/images/neon-fridge.png" alt="Neon Fridge" class="fridge-img">
+
+        <!-- Hotspots -->
+        <div class="hotspotp" id="spot1" style="top: 12%; left: 68%;"></div>
+        <div class="hotspotp" id="spot2" style="top: 50%; left: 52%;"></div>
+        <div class="hotspoto" id="spot3" style="top: 69%; left: 67%;"></div>
+        <br>
+        <button onclick="window.location.href='index.html'" style="margin-top: 20px;">Home</button>
+    </div>
+</div>
+
+<!-- Popups -->
+<div class="popup" id="popup1">
+    <div class="popup-content">
+        <span class="close" data-close="popup1">&times;</span>
+        <h2>In Today's World</h2>
+        <p>In the U.S., families throw away about 31.9% of their groceries each year; this adds up to $240 billion in wasted food. For many people, that kind of loss can really hurt their budgets.</p>
+    </div>
+</div>
+
+<div class="popup" id="popup2">
+    <div class="popup-content">
+        <span class="close" data-close="popup2">&times;</span>
+        <h2>Target Audience</h2>
+        <p>This website is here to help people who don’t always have many cooking ingredients or appliances, making sure no food goes to waste.</p>
+    </div>
+</div>
+
+<div class="popup" id="popup3">
+    <div class="popup-content">
+        <span class="close" data-close="popup3">&times;</span>
+        <h2>Our Objective</h2>
+        <p>We aim to reduce food waste, helping people save food while also protecting the environment. </p>
+    </div>
+</div>
+
+<script src="static/js/intro.js"></script>
+</body>
+</html>
