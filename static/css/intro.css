@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(90deg, #150128, #5b04a9);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.intro-title {
+    font-family: "Bitcount Ink", system-ui;
+    font-size: 2.5rem;
+    margin-top: 5%;
+    margin-bottom: -1%;
+    text-shadow: 0 0 10px #ffa024, 0 0 20px #7016bc;
+}
+
+.intro-subtitle {
+    font-family: "Montserrat", system-ui;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #ffa024, 0 0 20px #7016bc;
+}
+
+.fridge-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.fridge-img {
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255,160,36,0.4);
+}
+
+/* Hotspots (click areas) */
+.hotspoto {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgba(255,160,36,0.4);
+    transition: transform 0.3s;
+    border: 5px rebeccapurple solid;
+
+}
+
+.hotspotp {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #7016bccc;
+    transition: transform 0.3s;
+    border: 5px coral solid;
+}
+
+.hotspoto:hover {
+    transform: scale(1.2);
+    background: rgba(255,160,36,0.5);
+}
+
+.hotspotp:hover {
+    transform: scale(1.2);
+    background: #7016bccc;
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    animation: fadeIn 0.4s ease;
+}
+
+.popup-content {
+    background: linear-gradient(90deg, #150128, #5b04a9);
+    color: #ffffff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    animation: slideUp 0.4s ease;
+}
+
+.popup h2 {
+    color: #ff6f3c;
+    margin-bottom: 0.5rem;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.close:hover {
+    color: #ff6f3c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;} to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(20px);} to {transform: translateY(0);}
+}
+
+button {
+    background: linear-gradient(90deg, #7016bc, #ffa024);
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #5b04a9, #f86804, #ffa024);
+    box-shadow: 0 0 20px #ffa024, 0 0 40px #7016bc;
+    transform: scale(1.08);
+}
