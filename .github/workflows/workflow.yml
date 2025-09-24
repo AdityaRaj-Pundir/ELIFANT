@@ -1,4 +1,4 @@
-name: ELIFant Workflow
+name: workflow
 
 on: [push]
 
