@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyAJezQIX3ZGvss53jlUL8s3uWis-MACxHY"; // <--- put your Google API key here
+const API_KEY = process.env.API_KEY; // <--- put your Google API key here
 let steps = [];
 let currentStep = 0;
 
